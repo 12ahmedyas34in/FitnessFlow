@@ -1,0 +1,9 @@
+package com.Group6.fitness_tracker.repository;
+
+import com.Group6.fitness_tracker.entity.User;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface UserRepository extends JpaRepository<User, Long> {
+    User findByUsername(String username);
+    User findByEmail(String email);
+}
